@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Affan's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Poppins:wght@300&display=swap" rel="stylesheet"/>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background-color: #000;
+      position: relative;
+    }
+
+    .grid-container {
+      --grid: 10rem;
+      width: 100%;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transform-style: preserve-3d;
+      perspective: 100rem;
+      animation: rotate 100s linear infinite forwards;
+    }
+
+    .plane {
+      --dir: 1;
+      width: 300%;
+      height: 150%;
+      min-height: 70rem;
+      position: absolute;
+      bottom: 0;
+      transform-style: preserve-3d;
+      transform-origin: bottom center;
+      transform: translateX(-50%) rotateX(85deg);
+    }
+
+    .plane:last-child {
+      --dir: -1;
+      top: 0;
+      transform-origin: top center;
+      transform: translateX(-50%) rotateX(-85deg);
+    }
+
+    .plane > * {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+    }
+
+    .plane > *::before,
+    .plane > *::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .plane > *::before {
+      background-image: repeating-linear-gradient(to left, green, green 4px, transparent 4px, transparent var(--grid)),
+                        repeating-linear-gradient(to bottom, green, green 4px, transparent 4px, transparent var(--grid));
+      animation: move 1s linear infinite forwards;
+    }
+
+    .plane > *::after {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 255) var(--grid), rgba(0, 0, 0, 0));
+      z-index: 1;
+      transform: translateZ(1px);
+    }
+
+    @keyframes move {
+      from {
+        transform: translateY(0px);
+      }
+      to {
+        transform: translateY(calc(var(--grid) * var(--dir)));
+      }
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+
+    nav {
+      padding: 15px;
+      display: flex;
+      justify-content: flex-end;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-bottom: 1px solid green;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav span {
+      display: flex;
+      gap: 20px;
+      font-size: 18px;
+      align-items: center;
+    }
+
+    nav a {
+      color: #0f0;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hire-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .hire-button:hover {
+      background-color: #0056b3;
+    }
+
+    section {
+      padding: 60px 40px;
+    }
+
+    section h1 {
+      font-size: 2rem;
+      color: #0f0;
+    }
+
+    section p,
+    li {
+      color: #ccc;
+    }
+
+    p.highlight {
+      display: inline-block;
+      width: 50vw;
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Matrix Background -->
+  <div class="grid-container">
+    <div class="plane">
+      <div></div>
+    </div>
+    <div class="plane glow">
+      <div></div>
+    </div>
+  </div>
+  <aside class="profile-image">
+    <img src="afan.jpg" alt="Affan Tarique">
+  </aside>
+  
+  <style>
+  .profile-image {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+    animation: glowPulse 3s infinite ease-in-out;
+    border: 2px solid #0f0;
+    z-index: 1000;
+  }
+  
+  .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .profile-image:hover img {
+    transform: scale(1.1);
+  }
+  
+  @keyframes glowPulse {
+    0% {
+      box-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+    }
+    50% {
+      box-shadow: 0 0 20px #0f0, 0 0 40px #0f0, 0 0 60px #0f0;
+    }
+    100% {
+      box-shadow: 0 0 10px #0f0, 0 0 20px #0f0;
+    }
+  }
+  </style>
+  
+
+  <!-- Navigation -->
+  <nav>
+    <span>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#project">Project</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+      <button class="hire-button">Hire Me</button>
+      <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+        <button>Hire me</button>
+       </div>
+    </span>
+  </nav>
+
+  <!-- Sections -->
+  <section id="home">
+    <h1>Welcome to My Portfolio</h1>
+    <aside class="profile-image">
+    <img src="affan.png" alt="Affan Tarique">
+  </aside>
+  </section>
+
+  <section id="about">
+    <h1>About Me</h1>
+    <p class="highlight">
+      Hi I'm Affan Tarique Khan. I'm a passionate MERN stack developer with a keen interest in AI and building modern web applications. I love creating interactive, user-friendly solutions that solve real-world problems. I'm part of the Harkirat 100xDEV Cohort 3.0, where I'm sharpening my frontend skills. Currently, I'm actively seeking internship opportunities to work on impactful projects.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h1>Skills</h1>
+    <ul>
+      <li>Frontend: HTML, CSS, JavaScript, React.js</li>
+      <li>Backend: Node.js, Express.js</li>
+      <li>Database: MongoDB</li>
+      <li>Tools: Git, GitHub, Postman</li>
+      <li>Currently learning: AI Integration with OpenAI API</li>
+    </ul>
+  </section>
+
+  <section id="project">
+    <h1>Projects</h1>
+    <p>More content here...</p>
+  </section>
+
+  <section id="education">
+    <h1>Education</h1>
+    <p>More content here...</p>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Me</h1>
+    
+  
+    <div class="social-links">
+      <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fab fa-github"></i></a>
+      <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fab fa-facebook"></i></a>
+      <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fab fa-linkedin"></i></a>
+      <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+  
+</body>
+</html>
