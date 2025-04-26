@@ -1,19 +1,19 @@
 // Also tell the user if they are legal to vote or not.
 const user = [{
-    name: "ABC",
-    age: 10
+    name: "Ansha",
+    age: 25
 },{
-    name: "XYZ",
-    age: 20
+    name: "Affan",
+    age: 17
 }];
 
-function isVote(user){
+function isEligibletoVote (user){
     for(let i=0; i<user.length; i++){
         if(user[i].age>=18){
-            console.log("You are eligible for voting");
+            console.log( user[i].name + "You are eligible for voting");
         }else{
-            console.log("You are not eligible for voting");
+            console.log(user[i].name + "You are not eligible for voting");
         }
     }
 }
-isVote(user);
+isEligibletoVote (user);
