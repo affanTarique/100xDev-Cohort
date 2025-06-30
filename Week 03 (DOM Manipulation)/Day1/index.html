@@ -1,0 +1,14 @@
+<div>
+	<h1>hi there<h1>
+</div>
+
+<body>
+	<button onclick="createComplexDomElement()">Add</button>
+</body>
+<script>
+	function createComplexDomElement() {
+		const div = document.createElement("div");
+		div.innerHTML = "<h1> hi there </h1>";
+		document.querySelector("body").appendChild(div);
+	}
+</script>
