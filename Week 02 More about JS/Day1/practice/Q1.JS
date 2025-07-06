@@ -9,6 +9,7 @@ let ans = sum(2,3)
 // print hte result
 console.log(ans);
 
+//NEW
 function add (j,k) {
     return j + k ;
 
@@ -19,28 +20,30 @@ console.log(ans1);
 //q2. function to Find the sum from 1 to a number n
 function sum(num){
     let ans = 0;
+    for (let i = 1; i<= num; i++){
+    ans = ans + i;
 }
-
-
-
-
-// function to calculate  the sum of number from 1 to n
-function sum(num){
-    // varibale to store the sume
-    let ans = 0;
-
-    // loop from 1 to n
-    for (let i= 1; i<= num; i++){
-        // add the number to the sum
-        ans = ans + i;
-    }
-    // return the sum
-    return ans;
-
+    return  ans;
 }
 // calling the function and the result in a variable
+//let result = sum(5);
+const myans = sum(100);
+console.log(myans);
 
-let ans = ans(5);
 
-// print the result
-console.log(ans);
+
+// Synchronous code is executed line by line, in the order it's written. Each operation waits for the previous one to complete before moving on to the next one.
+function sum (n) {
+    let ans = 0;
+    for (let i =1; i <=n; i++){
+        ans = ans +i;
+    }
+    return ans ;
+
+}
+const ans1 = sum (100);
+console.log(ans1);
+const ans2 = sum (1000);
+console.log(ans2);
+const ans3 = sum (10000);
+console.log(ans3);
