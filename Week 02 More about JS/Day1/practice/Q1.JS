@@ -51,6 +51,5 @@ console.log(ans3);
 //creat a folder with a.txt and also with b.txt..
 const fs = require("fs");
 
-const filePath = path.join(__dirname, "a.txt");
-const contents = fs.readFileSync("filepath", "utf-8");
+const contents = fs.readFileSync("a.txt"), "utf-8");
 console.log(contents);
