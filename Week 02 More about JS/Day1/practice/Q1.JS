@@ -47,3 +47,10 @@ const ans2 = sum (1000);
 console.log(ans2);
 const ans3 = sum (10000);
 console.log(ans3);
+
+//creat a folder with a.txt and also with b.txt..
+const fs = require("fs");
+
+const filePath = path.join(__dirname, "a.txt");
+const contents = fs.readFileSync("filepath", "utf-8");
+console.log(contents);
