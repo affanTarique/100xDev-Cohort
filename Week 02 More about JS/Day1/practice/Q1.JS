@@ -41,7 +41,7 @@ function sum (n) {
     return ans ;
 
 }
-const ans1 = sum (100);
+const ans11 = sum (100);
 console.log(ans1);
 const ans2 = sum (1000);
 console.log(ans2);
