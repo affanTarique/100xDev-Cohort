@@ -3,6 +3,11 @@
   - A word, phrase, or name formed by rearranging the letters of another, such as spar, formed from rasp. */
 
   function isAnagram(str1, str2) {
-    const sortedstr1 = str1.
+    const sortedstr1 = str1.toLowerCase().split('').sort().join('');
+    const sortedstr2 = str2.toLowerCase().split('').sort().join('');
+
+    if (sortedstr1 == sortedstr2){
+      
+    }
 
   }
