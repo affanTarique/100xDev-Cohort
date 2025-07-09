@@ -7,7 +7,10 @@
     const sortedstr2 = str2.toLowerCase().split('').sort().join('');
 
     if (sortedstr1 == sortedstr2){
-      
+      return true;
+
+    } else {
+      return false;
     }
 
   }
