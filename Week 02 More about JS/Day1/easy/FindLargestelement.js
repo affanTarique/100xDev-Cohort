@@ -9,6 +9,7 @@ function findLargestElement(arr) {
             
         } 
     }
+    return largestNum;
 
 }
 
