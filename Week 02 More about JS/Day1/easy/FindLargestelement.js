@@ -5,7 +5,8 @@ function findLargestElement(arr) {
     let largestNum = numbers[0];
     for (let i = 0; i < numbers.length ; i++) {
         if (numbers [i] > largestNum[i]) {
-            largestNum = 
+            largestNum = numbers[i];
+            
         } 
     }
 
