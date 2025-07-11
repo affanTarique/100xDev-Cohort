@@ -14,5 +14,6 @@ Create promisified version of fs.readFile **/
 // 3.logs heyy there 5 seconds after step 2
 
 function setTimeoutPromisified (duration){
-    
+    return new Promise
+
 }
