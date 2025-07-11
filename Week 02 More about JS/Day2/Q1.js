@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 //create counter;
+//Create a counter in JavaScript
+//We have already covered this in the second lesson, but as an easy recap try to code a counter in Javascript It should go up as time goes by in intervals of 1 second
 let counter = 0;
 
 const updatecounter = () => {
@@ -8,14 +9,3 @@ const updatecounter = () => {
 };
 
 setInterval(updatecounter, 1000);
-=======
-//create counter;
-let counter = 0;
-
-const updatecounter = () => {
-    counter++;
-    console.log(counter);
-};
-
-setInterval(updatecounter, 1000);
->>>>>>> c412993 (Updated Day1 index.html and Day2 JS questions)
