@@ -4,4 +4,4 @@
 const fs = require('fs');
 // read file a.txt and store its content in contents variable
 
-const contents = fs.
+const contents = fs.readFileSync('a.txt', 'utf-8');
