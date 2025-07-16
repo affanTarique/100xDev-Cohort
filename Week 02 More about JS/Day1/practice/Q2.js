@@ -7,4 +7,6 @@ const fs = require('fs');
 const contents = fs.readFileSync('a.txt', 'utf-8');
 const contents =  fs.readFile
 sync ('a.txt', sync (err, 
-sync data 
+sync data { 
+    if
+}
