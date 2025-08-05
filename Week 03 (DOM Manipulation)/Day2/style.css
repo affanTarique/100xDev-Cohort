@@ -4,11 +4,14 @@ body {
       display: flex;
       justify-content: center;  /* horizontal center */
       align-items: center;      /* vertical center */
-      background-color: #41f7d8;
+      
+      background-image: url("https://media.istockphoto.com/id/1374485813/vector/3d-white-clipboard-task-management-todo-check-list-with-pencil-efficient-work-on-project.jpg?s=612x612&w=0&k=20&c=oHKBMqTKxzZEkm6k-8I7MGfhpft5DVSeT8qzXZNFoPM=");
       font-family: sans-serif;
+      background-size: cover;
+      background-position: center;
     }
     #tasks {
-      background-color: lightblue;
+      background-color: rgb(251, 253, 116);
       padding: 20px;
       height: 300px;
       width: 400px;
