@@ -4,3 +4,7 @@ function sum (a , b){
 
 const ans = sum (2,10);
 console.log(ans);
+
+
+
+//cmi---command line interference ---- npm and pwd ek cmi hai... ok...
