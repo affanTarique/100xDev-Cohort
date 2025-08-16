@@ -11,5 +11,5 @@ console.log(ans);
 
 //thenble in js--
 const thenable = {
-    
+    then: function(onFulfilled)
 }
