@@ -23,18 +23,11 @@ function main(fileName) { // Ek main function banaya gaya hai jo fileName parame
 main("sample.txt");
 
 /*fs → file padhne ke liye module.
-
 main(fileName) → function jo dynamic file input accept kare.
-
 fs.readFile → async tarike se file read karna, bina program block kiye.
-
 "utf-8" → data readable string ke form me mile.
-
 err, data → error handling aur file content access.
-
 for loop → content me words ginna space ke basis pe.
-
 console.log → output print karna.
-
 main("sample.txt") → program ko start karna specific file ke liye. */
 
