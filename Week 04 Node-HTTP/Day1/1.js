@@ -8,3 +8,8 @@ console.log(ans);
 
 
 //cmi---command line interference ---- npm and pwd ek cmi hai... ok...
+
+//thenble in js--
+const thenable = {
+    
+}
