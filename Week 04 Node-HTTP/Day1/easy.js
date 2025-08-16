@@ -1,37 +1,3 @@
-function sum (a , b){
-    return a +b
-}
-
-const ans = sum (2,10);
-console.log(ans);
-
-
-
-//cmi---command line interference ---- npm and pwd ek cmi hai... ok...
-//what made it command line interfernce is that it take some arguments here (index.js or 1.js) and it does something when i run this command --
-
-
-
-
-//thenble in js--
-
-//Yeh code ek example hai ki await kisi bhi object ko resolve kar deta hai agar uske andar .then function hai. 1 second wait karega aur phir "hello world" print karega.
-const thenable = {
-    then: function(onFulfilled) {
-        setTimeout(() => onFulfilled(42), 1000); 
-    }
-
-};
-
-async function main() {
-    const v = await thenable;
-    console.log ("hello world")
-}
-
-main();
-
-
-//cli---how to read a file so that one can make cli interfece to count the wird in the given file--
 const fs =  require("fs"); //--fs (File System) Node.js ka built-in module hai jo files ko read, write, delete, update karne deta hai.
 
 function main(fileName) { // Ek main function banaya gaya hai jo fileName parameter lega.-----Jaise main("sample.txt") matlab ye function sample.txt file ke content read karega aur words count karega.
@@ -55,3 +21,20 @@ function main(fileName) { // Ek main function banaya gaya hai jo fileName parame
 
 }
 main("sample.txt");
+
+/*fs → file padhne ke liye module.
+
+main(fileName) → function jo dynamic file input accept kare.
+
+fs.readFile → async tarike se file read karna, bina program block kiye.
+
+"utf-8" → data readable string ke form me mile.
+
+err, data → error handling aur file content access.
+
+for loop → content me words ginna space ke basis pe.
+
+console.log → output print karna.
+
+main("sample.txt") → program ko start karna specific file ke liye. */
+
