@@ -9,3 +9,4 @@ app.get('/create-todo', function(req, res) {
         todos
     })
 })
+app.listen(3000);
