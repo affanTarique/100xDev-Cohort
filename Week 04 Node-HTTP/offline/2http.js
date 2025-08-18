@@ -15,7 +15,8 @@ function sum (n) {
 
 app.get("/", function(req,res) {
     const n = req.query.n;
-    res.send("hii there");
+    const ans = sum(n);
+    res.send("hii your answer is " + ans);
 
 })
 
