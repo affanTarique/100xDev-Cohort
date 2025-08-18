@@ -1,0 +1,15 @@
+{
+  "name": "offline",
+  "version": "1.0.0",
+  "main": "1http.js",
+  "scripts": {
+    "dev": "nodemon 2http.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
