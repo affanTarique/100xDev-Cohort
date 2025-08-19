@@ -4,6 +4,8 @@ const app = express();
 
 app.get("/sum", function(req , res) {
     const a = req.query.a;
+    const b = req.query.b;
+
     
 
 } );
